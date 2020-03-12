@@ -12,6 +12,8 @@ plugins {
     id 'maven-publish'
 }
 
+def functionalLibraryVersion = '1.0.0'
+
 // Current Publication Version
 version = '1.0.0'
 
@@ -26,6 +28,8 @@ repositories {
 }
 
 dependencies {
+    implementation "com.samandrob.libraries:functional:${functionalLibraryVersion}"
+
     // This dependency is exported to consumers, that is to say found on their compile classpath.
     api 'org.apache.commons:commons-math3:3.6.1'
 
